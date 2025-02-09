@@ -522,21 +522,6 @@
 
   let keyupSet = false;
 
-  const saveCaptcha = async () => {
-    const saveEnabled = await GM.getValue("saveCaptcha");
-    if (!saveEnabled) {
-      return;
-    }
-
-    console.log(window.indices);
-    console.log(window.imgBase64);
-
-    const link = document.createElement('a');
-    link.download = window.indices+'.png';
-    link.href = window.imgBase64
-    link.click();
-  }
-
   const tRespDom = () => document.querySelector("#t-resp");
 
   const onKeyUp = () => {
